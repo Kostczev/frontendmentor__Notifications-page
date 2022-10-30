@@ -11,10 +11,10 @@ body {
 .wrapper {
    display: flex;
    flex-direction: column;
+   justify-content: space-between;
 }
 
 .notifications {
-   flex: 1 1 auto;
    max-width: 730px;
    margin: 0 auto;
    padding: 15px;
@@ -47,7 +47,6 @@ body {
 
    &__mark-read-all {
       color: $dark-grayish-blue;
-      //color: $grayish-blue;
       position: absolute;
       right: 0;
 
@@ -62,7 +61,6 @@ body {
 
 .notification.new {
    background-color: $very-light-grayish-blue;
-   //background-color: $light-grayish-blue-2;
 
    .notification__red-point {
       display: inline-block;
