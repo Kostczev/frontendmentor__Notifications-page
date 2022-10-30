@@ -1,0 +1,247 @@
+@charset "UTF-8";
+/*отступы*/
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+/*перещет области*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/*отключение обводки*/
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+/*делаем блочными некоторые теги*/
+nav, footer, header, aside {
+  display: block;
+}
+
+/*Уравниваем поведение шрифтов и тд для разных браузеров (также запрещает самовольное увеличени шрифтов (айфон))*/
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+/*Говоорим тегам наследовать семейство шрифта*/
+input, button, textarea {
+  font-family: inherit;
+  display: block;
+}
+
+/*еще куча фич, таких как отклчение крестиков и отступов в разных браузерах*/
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+  background: transparent;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+/*Обнуляем все заголовки*/
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+body {
+  min-height: 100%;
+  background-color: hsl(210deg, 60%, 98%);
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: hsl(219deg, 12%, 42%);
+}
+
+.notifications {
+  max-width: 730px;
+  margin: 0 auto;
+  padding: 15px;
+  background-color: hsl(0deg, 0%, 100%);
+}
+.notifications__header {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 30px;
+}
+.notifications__title {
+  font-size: 18px;
+  font-weight: 800;
+  color: hsl(224deg, 21%, 14%);
+}
+.notifications__count {
+  margin-left: 10px;
+  height: 25px;
+  width: 32px;
+  background-color: hsl(219deg, 85%, 26%);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: hsl(0deg, 0%, 100%);
+}
+.notifications__mark-read-all {
+  color: hsl(219deg, 12%, 42%);
+  position: absolute;
+  right: 0;
+  transition: 0.3s;
+  transition-property: color;
+  cursor: pointer;
+}
+.notifications__mark-read-all:hover {
+  color: hsl(219deg, 85%, 26%);
+}
+
+.notification.new {
+  background-color: hsl(210deg, 60%, 98%);
+}
+.notification.new .notification__red-point {
+  display: inline-block;
+  margin-left: 7px;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: hsl(1deg, 90%, 64%);
+}
+
+.notification {
+  display: flex;
+  padding: 16px;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+.notification__sender-photo {
+  height: 40px;
+  margin-right: 10px;
+}
+.notification__sender-photo img {
+  height: 100%;
+}
+.notification__sender-name {
+  color: hsl(224deg, 21%, 14%);
+  font-weight: 800;
+  transition: 0.3s;
+  transition-property: color;
+  cursor: pointer;
+}
+.notification__sender-name:hover {
+  color: hsl(219deg, 85%, 26%);
+}
+.notification__info {
+  margin: 0 5px;
+}
+.notification__plase {
+  font-weight: 800;
+  color: hsl(219deg, 12%, 42%);
+  transition: 0.3s;
+  transition-property: color;
+  cursor: pointer;
+}
+.notification__plase:hover {
+  color: hsl(219deg, 85%, 26%);
+}
+.notification__ago {
+  margin-top: 3px;
+  color: hsl(219deg, 14%, 63%);
+}
+.notification__massage {
+  margin-top: 15px;
+  border: 1px solid hsl(211deg, 68%, 94%);
+  padding: 20px;
+  border-radius: 5px;
+  transition: 0.3s;
+  transition-property: background-color;
+  cursor: pointer;
+}
+.notification__massage:hover {
+  background-color: hsl(205deg, 33%, 90%);
+}
+.notification__open-space {
+  flex: 1 1 auto;
+}
+.notification__ur-photo {
+  height: 49px;
+  padding: 2px;
+  cursor: pointer;
+}
+.notification__ur-photo img {
+  height: 100%;
+}
+.notification__ur-photo:hover {
+  padding: 0;
+  border: 2px solid hsl(205deg, 33%, 90%);
+  border-radius: 10px;
+}
+
+.attribution a {
+  transition: 0.3s;
+  color: hsl(224deg, 21%, 14%);
+}
+.attribution a:hover {
+  color: hsl(219deg, 85%, 26%);
+}
+
+@media (min-width: 850px) {
+  body {
+    line-height: 20px;
+    font-size: 16px;
+  }
+  .notifications {
+    margin: 8vh auto;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 0 20px -5px hsl(205deg, 33%, 90%);
+  }
+  .notifications__title {
+    font-size: 22px;
+  }
+  .notification__sender-photo {
+    height: 45px;
+    margin-right: 20px;
+  }
+  .notification__info {
+    margin: 0;
+  }
+  .notification__ago {
+    margin-top: 5px;
+  }
+}
