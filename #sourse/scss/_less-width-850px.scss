@@ -8,7 +8,13 @@ body {
    color: $dark-grayish-blue;
 }
 
+.wrapper {
+   display: flex;
+   flex-direction: column;
+}
+
 .notifications {
+   flex: 1 1 auto;
    max-width: 730px;
    margin: 0 auto;
    padding: 15px;
